@@ -77,11 +77,11 @@
   {# --------------- #}
   {# For HTML poster #}
   {# --------------- #}
-  <a href="{{ venue_url }}"><img style="padding: 0.55rem" src="img/logos/logo-banner.png" alt="EuCAIFCon logo"></a>
+  <a href="{{ venue_url }}"><img style="padding: 0.55rem" src="img/logos/fermi-logo.png" alt="Fermi logo"></a>
   {# -------------- #}
   {# For PDF poster #}
   {# -------------- #}
-  {# <a href="{{ venue_url }}"><img style="padding-right: 2.5rem" src="img/logos/logo-banner.png" alt="EuCAIFCon logo"></a> #}
+  {# <a href="{{ venue_url }}"><img style="padding-right: 2.5rem" src="img/logos/fermi-logo.png" alt="Fermi logo"></a> #}
 {% endblock %}
 
 {### Footer ###}
@@ -121,7 +121,26 @@
     </p>
   </article>
 
-  {# 2. Background Prediction with Neural Networks #}
+  {# 2. What is The Anti-Coincidence Detector? #}
+  <article>
+    <header><h3>2. What is The Anti-Coincidence Detector?</h3></header>
+    <p>
+      The <strong>Anti-Coincidence Detector</strong> (ACD) is a system on board of Fermi used to reject background
+      signal such as charged-particles from the Large Area Telescope signal. 
+    </p>
+    <figure>
+      <img style="width: 50%" src="img/pictures/ACD_from_above.jpg" alt="ACD_from_above">
+    </figure>
+    <p>
+      The ACD is composed of 89 plastic scintillator tiles that detect particles and photons, distributed in the five faces. The signal in each face 
+      looks like this:
+    </p>
+    <figure>
+      <img style="width: 100%" src="img/signals/Outputs_24.png" alt="outputs 24 signal">
+    </figure>
+  </article>
+
+  {# 3. Background Prediction with Neural Networks #}
   <article>
     <header><h3>2. Background Prediction with Neural Networks</h3></header>
     <p>
@@ -135,7 +154,7 @@
       
     </p>
     <figure>
-      <img style="width: 90%" src="img/schemes/inputs_nn_output.png" alt="full/fast sim schemes">
+      <img style="width: 100%" src="img/schemes/inputs_nn_output.png" alt="full/fast sim schemes">
       <figcaption>
         <small>
           The <strong>detailed simulation</strong> of physics processes relies on Geant4 and is computed 
@@ -146,36 +165,6 @@
       </figcaption>
     </figure>
     <hr/>
-    <figure>
-      <img style="width: 90%" src="img/schemes/flash-sim-scheme.png" alt="flash sim schemes">
-      <figcaption>
-        <small>
-          <strong><em>Flash</em></strong> (or <em>Ultra-Fast</em>) <strong><em>simulation</em></strong> 
-          strategies aim to directly transform generator-level particles into analysis-level reconstructed 
-          objects.
-        </small>
-      </figcaption>
-    </figure>
-  </article>
-
-  {# 3. What is Lamarr? #}
-  <article>
-    <header><h3>3. What is Lamarr?</h3></header>
-    <p>
-      <strong><em>Lamarr</em></strong> is the novel flash-simulation framework of LHCb, able to offer the 
-      fastest option to produce simulated samples. Lamarr consists of a <strong>pipeline of</strong> (ML-based) 
-      <strong>modular parameterizations</strong> designed to replace both the simulation and reconstruction steps.
-    </p>
-    <figure>
-      <img style="width: 95%" src="img/schemes/lamarr-pipeline.png" alt="Lamarr modular layout">
-    </figure>
-    <p>
-      The Lamarr pipeline can be split in two branches:
-      <ol>
-        <li><strong>charged particles</strong> require tracking and particle identification models;</li>
-        <li><strong>neutral objects</strong> need to face the <em>particle-to-particle correlation</em> problem.</li>
-      </ol>
-    </p>
   </article>
 
   {# 4. Models under the \(k\)-to-\(k\) hypothesis #}
