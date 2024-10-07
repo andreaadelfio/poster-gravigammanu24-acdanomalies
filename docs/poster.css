@@ -185,7 +185,8 @@ article h1,
 article ul,
 article li,
 article figcaption,
-article small {
+article small,
+article figure {
   color: #1528bc;
 }
 article > *,
