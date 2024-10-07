@@ -182,7 +182,8 @@
     </p>
     <p>
       The algorithm takes each true signal of the ACD and the prediction of its background and calculates the statistic for each signal. 
-      When the statistic is above a certain threshold, the algorithm triggers an event for the face. Successive events are merged if they are close in time, (180 seconds).
+      When the statistic is above a certain threshold, the algorithm triggers an event for the face. Successive events are merged if they are close in time (180 seconds).
+      When more then one face triggers an event, the algorithm merges the triggers to create a single anomalous event.
     </p>
   </article>
 
