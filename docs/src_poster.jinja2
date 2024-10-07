@@ -146,7 +146,9 @@
     <p>
       The software was developed starting from the need to predict the background in the Anti-Coincidence Detector (ACD) onboard the Fermi satellite.
       The software implements a <strong>Feed Forward Neural Network</strong> (FFNN) to model the temporal behaviours.
-      The network is trained on a dataset of time series from the Fermi Anti-Coincidence Detector (ACD) given a set of input features:
+    </p>
+    <p>
+      As a supervised technique, the neural network training is performed on a dataset having as labeled ouput the time series of the five signals in the ACD and a set of input features:
       <ul>
         <li>the parameters in the <strong>weekly Spacecraft files</strong> (FT2) from the Fermi Collaboration;</li>
         <li>the <strong>Solar Activity</strong> retrieved from the Geostationary Operational Environmental Satellite (GOES) X-Ray Sensor (XRS).</li>
@@ -168,6 +170,10 @@
   <article>
     <header><h3>4. Results of the NN</h3></header>
     <p>
+      The FFNN was trained on a dataset from February 2024 to July 2024, and then tested on different periods with known solar flare events.
+      <figure>
+        <img style="width: 80%" src="img/pictures/result_nn.png" alt="full/result_nn">
+      </figure>
     </p>
   </article>
 
@@ -182,22 +188,7 @@
   <article>
     <header><h3>5. Results of the Triggering Algorithm</h3></header>
     <p>
-      Lamarr parameterizes the high-level response of the <strong>LHCb tracking system</strong> relying on the 
-      following models:
-      <ul>
-        <li><strong><u>propagation:</u></strong> approximates the trajectory of charged particles through the 
-        dipole magnetic field &#8594; <em>parametric model</em>;</li>
-        <li><strong><u>geometrical acceptance:</u></strong> predicts which of the generated tracks lay within a sensitive 
-        area of the detector &#8594; <em>DNN model</em>;</li>
-        <li><strong><u>tracking efficiency:</u></strong> predicts which of the generated tracks in the acceptance are properly 
-        reconstructed by the detector &#8594; <em>DNN model</em>;</li>
-        <li><strong><u>tracking resolution:</u></strong> parameterizes the errors introduced by the reconstruction algorithms
-        to the track parameters &#8594; <em>GAN model</em>;</li>
-        <li><strong><u>covariance matrix:</u></strong> parameterizes the uncertainties assessed by the Kalman filter
-        procedure &#8594; <em>GAN model</em>.</li>
-      </ul>
     </p>
-    <hr/>
     <figure>
       <img style="width: 49%" src="img/lhcb-figs/lamarr-trk-efficiency.png" alt="Lamarr trk efficiency">
       <img style="width: 49%" src="img/lhcb-figs/lamarr-trk-resolution.png" alt="Lamarr trk resolution">
