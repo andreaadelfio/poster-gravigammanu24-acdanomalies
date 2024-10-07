@@ -363,16 +363,20 @@
   <article>
     <header><h3>11. Conclusions and outlook</h3></header>
     <p>
-      Great effort is ongoing to put a <strong>fully parametric simulation</strong> of the LHCb experiment 
-      into production, aiming to reduce the pressure on computing resources.
+      The development of ACDAnomalies is ongoing to offer a versatile and flexible <strong>tool
+      for the anomaly detection in time series data</strong>.
     </p>
     <p>
-      DNN-based and GAN-based models succeed in describing the high-level response of the LHCb tracking and 
-      PID detectors for <strong>charged particles</strong>. Work is still required to parameterize the 
-      response of the ECAL detector due to the <strong>particle-to-particle correlation problem</strong>.
+      <strong>FFNN-based models</strong></strong> can be used to describe complex dependencies, such as the ones dependent on the environment
+      in which the Fermi satellite is immersed.
+      Work is still required to assess the performance of the neural network in big datasets and in different conditions (e.g.
+      periods in which the solar activity is particularly high).
     </p>
     <p>
-      Future development Lamarr aims to support both integration within the LHCb software stack and its 
+      The triggering algorithm is an importan part of the software, and it is still under development.
+    </p>
+    <p>
+      Future development of ACDAnomalies aims to support both integration within the Fermi software stack and its 
       use as a <strong>stand-alone</strong> package.
     </p>
   </article>
@@ -381,7 +385,7 @@
   <article>
     <header><h3>Acknowledgements</h3></header>
     <p>
-      The work presented in this contribution is performed in the framework of Spoke 0 and Spoke 2 of the ICSC 
+      The work presented in this contribution is performed in the framework of Spoke 0 and Spoke 3 of the ICSC 
       project - <em>Centro Nazionale di Ricerca in High Performance Computing, Big Data and Quantum Computing</em>, 
       funded by the NextGenerationEU European initiative through the Italian Ministry of University and 
       Research, PNRR Mission 4, Component 2: Investment 1.4, Project code CN00000013 - CUP I53C21000340006.
@@ -393,24 +397,8 @@
     <header><h3>References</h3></header>
     <small>
       <ol>
-        <li>V. Chekalina <em>et al.</em>, <em>Generative Models for Fast Calorimeter Simulation: the LHCb case</em>, <a href="https://doi.org/10.1051/epjconf/201921402034">EPJ Web Conf. <strong>214</strong> (2019) 02034</a>, <a href="https://arxiv.org/abs/1812.01319">arXiv:1812.01319</a></li>
-        <li>A. Maevskiy <em>et al.</em>, <em>Fast Data-Driven Simulation of Cherenkov Detectors Using Generative Adversarial Networks</em>, <a href="https://doi.org/10.1088/1742-6596/1525/1/012097">J. Phys. Conf. Ser. <strong>1525</strong> (2020) 012097</a>, <a href="https://arxiv.org/abs/1905.11825">arXiv:1905.11825</a></li>
-        {# <li>L. Anderlini, <em>Machine Learning for the LHCb Simulation</em>, <a href="https://arxiv.org/abs/2110.07925">arXiv:2110.07925</a></li> #}
-        <li>L. Anderlini and M. Barbetti, <em>scikinC: a tool for deploying machine learning as binaries</em>, <a href="https://doi.org/10.22323/1.409.0034">PoS <strong>CompTools2021</strong> (2022) 034</a></li>
-        <li>A. Rogachev and F. Ratnikov, <em>GAN with an Auxiliary Regressor for the Fast Simulation of the Electromagnetic Calorimeter Response</em>, <a href="https://doi.org/10.1088/1742-6596/2438/1/012086">J. Phys. Conf. Ser. <strong>2438</strong> (2023) 012086</a>, <a href="https://arxiv.org/abs/2207.06329">arXiv:2207.06329</a></li>
-        <li>L. Anderlini <em>et al.</em>, <em>Lamarr: the ultra-fast simulation option for the LHCb experiment</em>, <a href="https://doi.org/10.22323/1.414.0233">PoS <strong>ICHEP2022</strong> (2023) 233</a></li>
-        <li>M. Barbetti, <em>Lamarr: LHCb ultra-fast simulation based on machine learning models deployed within Gauss</em>, <a href="https://arxiv.org/abs/2303.11428">arXiv:2303.11428</a></li>
-        {# <li>F. Vaselli <em>et al.</em>, <em>FlashSim prototype: an end-to-end fast simulation using Normalizing Flow</em>, <a href="https://cds.cern.ch/record/2858890">CERN-CMS-NOTE-2023-003</a></li> #}
-        <li>L. Anderlini <em>et al.</em>, <em>The LHCb ultra-fast simulation option, Lamarr: design and validation</em>, <a href="https://arxiv.org/abs/2309.13213">arXiv:2309.13213</a></li>
-        <li>F. Vaselli <em>et al.</em>, <em>End-to-end simulation of particle physics events with Flow Matching and generator Oversampling</em>, <a href="https://arxiv.org/abs/2402.13684">arXiv:2402.13684</a></li>
-        <li>M. Barbetti, <em>The flash-simulation paradigm and its implementation based on Deep Generative Models for the LHCb experiment at CERN</em>, PhD thesis, University of Firenze, 2024</li>
+        <li>A. Author, <em>Title</em>, Paper, Editor, Year</li>
       </ol>
     </small>
-    {# -------------- #}
-    {# For PDF poster #}
-    {# -------------- #}
-    {# <figure>
-      <img style="width: 25%" src="img/qr-code.png" alt="QR code">
-    </figure> #}
   </article>
 {% endblock %}
