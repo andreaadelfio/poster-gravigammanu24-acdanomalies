@@ -62,8 +62,8 @@
       This work presents a versatile and flexible <strong>Machine Learning-based software</strong> designed to
       address two main challenges: 
       <ul>
-        <li><strong>modeling the temporal behaviours</strong>
-      within datasets to predict the evolution of time series;</li>
+        <li><strong>modeling the temporal behaviour</strong>
+        within time series datasets to predict the evolution of time series;</li>
         <li><strong>identifying anomalies</strong> within those series;</li>
               </ul>
     </p>
@@ -97,41 +97,33 @@
         <li>the parameters in the <strong>weekly Spacecraft files</strong> (FT2) from the Fermi Collaboration;</li>
         <li>the <strong>Solar Activity</strong> retrieved from the Geostationary Operational Environmental Satellite (GOES) X-Ray Sensor (XRS).</li>
       </ul>
-      
     </p>
     <figure>
       <img style="width: 100%" src="img/schemes/inputs_nn_output.png" alt="full/fast sim schemes">
-      <figcaption>
-        <small>
-          The <strong>detailed simulation</strong> of physics processes relies on Geant4 and is computed 
-          within Gauss*, the LHCb simulation software.<br>
-          <strong><em>Fast simulation</em></strong> techniques aim to speed up Geant4 by parameterizing 
-          the energy deposits instead of relying on physics models.
-        </small>
-      </figcaption>
     </figure>
-    <hr/>
+    <p>
+      The NN has a <strong>Mean Absolute Error</strong> Loss Function, less sensitive to outliers in the dataset:
+      <figure>
+        <img style="width: 50%" src="img/pictures/mae.png" alt="full/fast sim schemes">
+      </figure>
+    </p>
   </article>
 
+
     <article>
-    <header><h3>4. Models under the \(k\)-to-\(k\) hypothesis</h3></header>
+    <header><h3>4. Results of the NN</h3></header>
     <p>
-      Assuming the existence of an <strong>unambiguous</strong> (\(k\)-to-\(k\)) <strong>relation</strong> 
-      between generated particles and reconstructed objects, the high-level detector response can be modeled in terms 
-      of <strong>efficiency</strong> and <strong>"resolution"</strong> (i.e., analysis-level quantities):
-      <ul>
-        <li><strong><u>Efficiency:</u></strong> <em>Deep Neural Networks</em> (DNN) trained to perform 
-        classification tasks so that they can be used to parameterize the fraction of "good" candidates (e.g., 
-        accepted, reconstructed, or selected).</li>
-        <li><strong><u>Resolution:</u></strong> Conditional <em>Generative Adversarial Networks</em>
-        (GAN) trained on detailed simulated samples to parameterize the high-level response of LHCb detector 
-        (e.g., reconstruction errors, differential log-likelihoods, or multivariate classifier output).</li>
-      </ul>
     </p>
   </article>
 
     <article>
-    <header><h3>5. Charged particles: the tracking system</h3></header>
+    <header><h3>4. Identification of anomalies: Gaussian FOCuS</h3></header>
+    <p>
+    </p>
+  </article>
+
+    <article>
+    <header><h3>5. Results of the Triggering Algorithm</h3></header>
     <p>
       Lamarr parameterizes the high-level response of the <strong>LHCb tracking system</strong> relying on the 
       following models:
