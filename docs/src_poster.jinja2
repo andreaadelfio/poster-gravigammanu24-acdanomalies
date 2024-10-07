@@ -180,9 +180,9 @@
   </article>
 
 
-  {# 4. Results of the NN #}
+  {# 5. Results of the NN #}
   <article>
-    <header><h3>4. Results of the NN</h3></header>
+    <header><h3>5. Results of the NN</h3></header>
     <p>
       The FFNN was trained on a dataset from February 2024 to July 2024, and then tested on different periods with known solar flare events.
       <figure>
@@ -197,16 +197,16 @@
     </p>
   </article>
 
-  {# 5. Identification of anomalies: Gaussian FOCuS #}
+  {# 6. Identification of anomalies: Gaussian FOCuS #}
   <article>
-    <header><h3>4. Identification of anomalies: Gaussian FOCuS</h3></header>
+    <header><h3>6. Identification of anomalies: Gaussian FOCuS</h3></header>
     <p>
     </p>
   </article>
 
-  {# 5. Results of the Triggering Algorithm #}
+  {# 7. Results of the Triggering Algorithm #}
   <article>
-    <header><h3>5. Results of the Triggering Algorithm</h3></header>
+    <header><h3>7. Results of the Triggering Algorithm</h3></header>
     <p>
     </p>
     <figure>
@@ -221,149 +221,9 @@
     </figure>
   </article>
 
-  {# 6. Charged particles: the PID system #}
+  {# 8. Conclusions and outlook #}
   <article>
-    <header><h3>6. Charged particles: the PID system</h3></header>
-    <p>
-      Lamarr parameterizes the high-level response of the <strong>LHCb PID system</strong> relying on the following 
-      models:
-      <ul>
-        <li><strong><u>RICH PID:</u></strong> parameterizes DLLs resulting from the RICH detectors &#8594; 
-        <em>GAN model</em>;</li>
-        <li><strong><u>MUON PID:</u></strong> parameterizes likelihoods resulting from the MUON system &#8594; 
-        <em>GAN model</em>;</li>
-        <li><strong><u>isMuon flag:</u></strong> parameterizes the response of a FPGA-based criterion for muon loose 
-        boolean selection &#8594; <em>DNN model</em>;</li>
-        <li><strong><u>Global PID:</u></strong> parameterizes the global high-level response of the PID system, 
-        consisting of CombDLLs and ProbNNs &#8594; <em>GAN model</em>.</li>
-      </ul>
-    </p>
-    <p>
-    Lamarr provides separated models for <strong>muons</strong>, <strong>pions</strong>, <strong>kaons</strong>, 
-    and <strong>protons</strong> for each PID set of variables.
-    </p>
-    <hr/>
-    <figure>
-      <img style="width: 47%; padding-right: 1.0%" src="img/lhcb-figs/lamarr-pid-richdll-hist.png" alt="Lamarr RICH histograms">
-      <img style="width: 47%; padding-left: 1.0%" src="img/lhcb-figs/lamarr-pid-richdll-eff-k.png" alt="Lamarr RICH efficiency">
-      <figcaption>
-        <small>
-          Validation plots for the proton-kaon separation parameterized with the GAN-based models of the RICH 
-          response in terms of distributions (left) and proton selection misidentification (right).
-        </small>
-      </figcaption>
-    </figure>
-  </article>
-
-  {# 7. Neutral objects: the ECAL detector #}
-  <article>
-    <header><h3>7. Neutral objects: the ECAL detector</h3></header>
-    <p>
-      The flash simulation of the LHCb ECAL detector is a non trivial task:
-      <ul>
-        <li>bremsstrahlung radiation, converted photons, or merged \(\pi^0\) may lead to have \(n\) <strong>generated 
-        particles</strong> responsible for \(m\) <strong>reconstructed objects</strong> (in general, with \(n \ne m)\);</li>
-        <li>the <strong><em>particle-to-particle correlation</em> problem</strong> limits the validity of strategies 
-        used for modeling the unambiguous \(k\)-to-\(k\) detector response.</li>
-      </ul>
-    </p>
-    <p>
-      To parameterize a generic \(n\)-to-\(m\) response of the ECAL detector, solutions inspired by the natural
-      language <strong>translation problem</strong> are currently under investigation:
-      <ul>
-        <li>the aim is to define an <strong>event-level description</strong> of the ECAL response;</li>
-        <li>assuming ordered sequences of photons/clusters, the problem can be modeled with a 
-        <strong><em>Transformer</em></strong> model;</li>
-        <li>complying with the problem topology, the ECAL response can be modeled with a 
-        <strong><em>Graph Neural Network</em></strong> (GNN) model</li>
-      </ul>
-    </p>
-    <hr/>
-    <figure>
-      <img style="width: 48%; padding-right: 0.5%" src="img/lhcb-figs/lamarr-ecal-full.png" alt="Lamarr ECAL full">
-      <img style="width: 48%; padding-left: 0.5%" src="img/lhcb-figs/lamarr-ecal-flash.png" alt="Lamarr ECAL flash">
-      <figcaption>
-        <small>
-          Validation plots for the \((x, y)\)-position of the ECAL clusters as reconstructed by detailed
-          simulation (left) and a Transformer-based model (right). Each bin entry is properly weighted to 
-          include also the energy signature.
-        </small>
-      </figcaption>
-    </figure>
-  </article>
-
-  {# 8. Validation campaign #}
-  <article>
-    <header><h3>8. Validation campaign</h3></header>
-    <p>
-      Lamarr provides the high-level response of the LHCb detector by relying on a <strong>pipeline of</strong> 
-      (subsequent) <strong>ML-based modules</strong>. To validate the charged particles chain, the distributions 
-      of a set of <strong>analysis-level</strong> reconstructed quantities resulting from Lamarr have been compared 
-      with those obtained from detailed simulation for \(\Lambda_b^0 \to \Lambda_c^+ \mu^- X\) decays 
-      with \(\Lambda_c^+ \to p K^- \pi^+\). 
-    </p>
-    <p>
-      The deployment of the ML-based models follows a <strong><em>transcompilation approach</em></strong> based on 
-      <strong><span class="monospace">scikinC</span></strong>. The models are translated to C files, compiled as 
-      <em>shared objects</em>, and then dynamically linked in the LHCb simulation software (Gauss).
-    </p>
-    <p>
-      The integration of Lamarr with Gauss enables:
-      <ul>
-        <li>interface with all the <strong>LHCb-tuned physics generators</strong> (e.g., Pythia8, EvtGen);</li>
-        <li>compatibility with the <strong>distributed computing middleware</strong> and production environment;</li>
-        <li>providing <strong>ready-to-use datasets</strong> for centralized analysis.</li>
-      </ul>
-    </p>
-    <hr/>
-    <figure>
-      <img style="width: 49%" src="img/lhcb-figs/Py8_Lambda_c_mu_mass.png" alt="Py8 Lc_mu mass">
-      <img style="width: 49%" src="img/lhcb-figs/PGun_Lambda_c_mu_mass.png" alt="PGun Lc_mu mass">
-      <figcaption>
-        <small>
-          Validation plots for the \(\Lambda_c^+ \mu^-\) mass obtained from Pythia8 (left) and particle-gun (right) 
-          generators by Lamarr VS. detailed simulation. Reproduced from 
-          <a href="https://cds.cern.ch/record/2814081">LHCB-FIGURE-2022-014</a>.
-        </small>
-      </figcaption>
-    </figure>
-  </article>
-
-  {# 9. Preliminary timing studies #}
-  <article>
-    <header><h3>9. Preliminary timing studies</h3></header>
-    <p>
-      Overall time needed for producing simulated samples has been analyzed for detailed simulation (Geant4-based) 
-      and Lamarr. When Lamarr is employed, the generation of particles from collisions (e.g., with Pythia8) 
-      becomes the new <strong>major CPU consumer</strong>.
-    </p>
-    <p>
-      Lamarr could allow to reduce the CPU cost for the simulation of (at least) 
-      <strong>two-order-of-magnitude</strong>. Further reductions will require speeding up the generators.
-    </p>
-    <p class="boxed center">
-      {# <small> #}
-        <strong><u>Detailed simulation:</u></strong> Pythia8 + Geant4 + reco<br/>
-        1M events @ 2.5 kHS06.s/event ≃ 80 HS06.y
-      {# </small> #}
-    </p>
-    <p class="boxed center">
-      {# <small> #}
-        <strong><u>Flash simulation:</u></strong> Pythia8 + Lamarr<br/>
-        1M events @ 0.5 kHS06.s/event ≃ 15 HS06.y
-      {# </small> #}
-    </p>
-    <p class="boxed center">
-      {# <small> #}
-        <strong><u>Flash simulation:</u></strong> ParticleGun + Lamarr<br/>
-        100M events @ 1 HS06.s/event ≃ 4 HS06.y
-      {# </small> #}
-    </p>
-  </article>
-
-  {# 11. Conclusions and outlook #}
-  <article>
-    <header><h3>11. Conclusions and outlook</h3></header>
+    <header><h3>8. Conclusions and outlook</h3></header>
     <p>
       The development of <strong><span class="monospace">ACDAnomalies</span></strong> is ongoing to offer a versatile and flexible <strong>tool
       for the anomaly detection in time series data</strong>.
