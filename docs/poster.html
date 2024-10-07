@@ -139,10 +139,11 @@
       <img style="width: 100%" src="img/schemes/inputs_nn_output.png" alt="full/inputs_nn_output schemes">
     </figure>
     <p>
-      The NN has a <strong>Mean Absolute Error</strong> Loss Function, less sensitive to outliers in the dataset:
+      The NN uses the <strong>Mean Absolute Error</strong> as a Loss Function, which is less sensitive to outliers in the dataset:
       <figure>
         <img style="width: 60%" src="img/pictures/mae.png" alt="full/fast sim schemes">
       </figure>
+      so that the loss function is minimized for the sum of the absolute differences between the predicted and the true values for each signal.
     </p>
     <p>
       The NN is trained with the <strong>Adam</strong> optimizer, a stochastic gradient descent method that is based on adaptive estimation and 
