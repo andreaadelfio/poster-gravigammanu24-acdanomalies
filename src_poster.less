@@ -12,7 +12,7 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 //////////////////
 // Tango colors //
 //////////////////
-
+@my-article-color: #1528bc;
 @tango-butter-l: #fce94f;
 @tango-butter-m: #edd400;
 @tango-butter-d: #c4a000;
@@ -91,11 +91,12 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 @color-head-title: white;
 @color-head-bkg: @my-icsc-color-1;
 @color-foot-bkg: @my-icsc-color-2;
-@color-block-title: white;
-@color-block-title-bkg: black;
+@color-block-title: @my-icsc-color-1;
+@color-block-title-bkg: white;
 @color-block-bkg: white;
 @color-accent: @my-icsc-color-1;
 @color-bkg: @tango-aluminum-3;
+
 
 ///////////////////
 // Poster layout //
@@ -300,6 +301,11 @@ article {
         margin: 0;
     }
 
+    p, h1, ul, li, figcaption, small {
+        color: @my-article-color;
+    }
+    
+
     > *, > p, > ul, > ol, > pre, > div, > figure, > hr {
         margin: @mid-space 0 auto 0;
     }
@@ -315,7 +321,7 @@ article {
         padding: @thin-space @mid-space;
 
         > h3 {
-            font-weight: 500;
+            font-weight: 900;
         }
     }
 

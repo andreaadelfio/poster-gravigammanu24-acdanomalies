@@ -5,7 +5,7 @@
 {% set poster_title = "Anomaly Detection with Machine Learning in Time Series Data from the Fermi Anti-Coincidence Detector" %}
 {% set poster_subtitle = "" %}
 {% set venue_long = "Gravi Gamma Nu 2024" %}
-{% set venue_short = "EuCAIFCon24" %}
+{% set venue_short = "09/10/2024 - 11/10/2024" %}
 {% set webpage_title = poster_title + " (" + venue_short + " poster)" %}
 {% set project_url = "" %}
 {% set venue_url = "https://gravi-gamma.my.canva.site/fifth-gravi-gamma-workshop" %}
@@ -77,11 +77,11 @@
   {# --------------- #}
   {# For HTML poster #}
   {# --------------- #}
-  <a href="{{ venue_url }}"><img style="padding: 0.55rem" src="img/logos/eucaifcon24-white-logo.png" alt="EuCAIFCon logo"></a>
+  <a href="{{ venue_url }}"><img style="padding: 0.55rem" src="img/logos/logo-banner.png" alt="EuCAIFCon logo"></a>
   {# -------------- #}
   {# For PDF poster #}
   {# -------------- #}
-  {# <a href="{{ venue_url }}"><img style="padding-right: 2.5rem" src="img/logos/eucaifcon24-white-logo.png" alt="EuCAIFCon logo"></a> #}
+  {# <a href="{{ venue_url }}"><img style="padding-right: 2.5rem" src="img/logos/logo-banner.png" alt="EuCAIFCon logo"></a> #}
 {% endblock %}
 
 {### Footer ###}
@@ -100,7 +100,7 @@
 
 {# General information shown on the right side #}
 {% block general_info %}
-  May 2024, Amsterdam (Netherlands)
+  October 2024, Bari (Italy)
 {% endblock %}
 
 {### Contents ###}
@@ -129,13 +129,13 @@
       The software implements a <strong>Feed Forward Neural Network</strong> (FFNN) to model the temporal behaviours.
       The network is trained on a dataset of time series from the Fermi Anti-Coincidence Detector (ACD) given a set of input features:
       <ul>
-        <li>the parameters in the <strong>weekly Spacecraft files</strong> from the Fermi Collaboration;</li>
+        <li>the parameters in the <strong>weekly Spacecraft files</strong> (FT2) from the Fermi Collaboration;</li>
         <li>the <strong>Solar Activity</strong> retrieved from the Geostationary Operational Environmental Satellite (GOES) X-Ray Sensor (XRS).</li>
       </ul>
       
     </p>
     <figure>
-      <img style="width: 90%" src="img/schemes/full-fast-sim-scheme.png" alt="full/fast sim schemes">
+      <img style="width: 90%" src="img/schemes/inputs_nn_output.png" alt="full/fast sim schemes">
       <figcaption>
         <small>
           The <strong>detailed simulation</strong> of physics processes relies on Geant4 and is computed 
