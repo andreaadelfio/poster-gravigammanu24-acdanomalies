@@ -34,7 +34,6 @@ in [*European AI for Fundamental Physics Conference 2024*](https://www.aanmelder
 
 ### Authors
 
-> *_speaker_
 
   <span class="medium">
     <a property="author"><strong>A. Adelfio</strong><sup>1</sup></a>,
