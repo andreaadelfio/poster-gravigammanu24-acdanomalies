@@ -31,6 +31,7 @@ in [*European AI for Fundamental Physics Conference 2024*](https://www.aanmelder
 <p>
   This tool can be adapted for various signals, making it applicable across different contexts in multimessenger studies.
 </p>
+
 ### Authors
 
 > *_speaker_
