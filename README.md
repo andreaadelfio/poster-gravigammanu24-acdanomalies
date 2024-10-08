@@ -34,15 +34,14 @@ in [*European AI for Fundamental Physics Conference 2024*](https://www.aanmelder
 
 ### Authors
 
-
-  <span class="medium">
-    <a property="author"><strong>A. Adelfio</strong><sup>1</sup></a>,
-    <a property="author">S. Cutini<sup>1</sup></a>,
-    <a property="author">S. Germani<sup>2</sup></a>,
-    <a property="author">F. Longo<sup>3</sup></a>,
-    <a property="author">S. Maldera<sup>4</sup></a>,
-    <a property="author">R. Crupi<sup>5</sup></a>,
-  </span>
+<span class="medium">
+  <a property="author"><strong>A. Adelfio</strong><sup>1</sup></a>,
+  <a property="author">S. Cutini<sup>1</sup></a>,
+  <a property="author">S. Germani<sup>2</sup></a>,
+  <a property="author">F. Longo<sup>3</sup></a>,
+  <a property="author">S. Maldera<sup>4</sup></a>,
+  <a property="author">R. Crupi<sup>5</sup></a>,
+</span>
 
 <details>
   <summary><b>Affiliations</b></summary>
