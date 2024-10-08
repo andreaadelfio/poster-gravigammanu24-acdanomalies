@@ -14,23 +14,23 @@ in [*European AI for Fundamental Physics Conference 2024*](https://www.aanmelder
 
 ## Abstract
 
-    <p>
-      Multimessenger astrophysics relies on multiple observational data channels, requiring efficient methods to analyze 
-      events of astrophysical origin. Given the increasing volume and complexity of data from modern observatories, 
-      Machine Learning techniques have become essential for efficiently identifying signals.
-    </p>
-    <p>
-      This project applies Machine Learning techniques to time series data from the Anti-Coincidence Detector on 
-      the Fermi Gamma-ray Space Telescope, with the aim of improving the detection of high-energy transient events such 
-      as Gamma-Ray Bursts. The poster begins by introducing the motivations of this work; followed by an overview of the 
-      Anti-Coincidence Detector and the satellite data itself. A Feed-Forward Neural Network is employed to learn temporal 
-      patterns in the time series and predict the background these series. It is followed by the implementation of a 
-      triggering algorithm for anomaly detection, which identifies significant deviations from the background, 
-      signaling the presence of astrophysical transients in the ACD data.
-    </p>
-    <p>
-      This tool can be adapted for various signals, making it applicable across different contexts in multimessenger studies.
-    </p>
+<p>
+  Multimessenger astrophysics relies on multiple observational data channels, requiring efficient methods to analyze 
+  events of astrophysical origin. Given the increasing volume and complexity of data from modern observatories, 
+  Machine Learning techniques have become essential for efficiently identifying signals.
+</p>
+<p>
+  This project applies Machine Learning techniques to time series data from the Anti-Coincidence Detector on 
+  the Fermi Gamma-ray Space Telescope, with the aim of improving the detection of high-energy transient events such 
+  as Gamma-Ray Bursts. The poster begins by introducing the motivations of this work; followed by an overview of the 
+  Anti-Coincidence Detector and the satellite data itself. A Feed-Forward Neural Network is employed to learn temporal 
+  patterns in the time series and predict the background these series. It is followed by the implementation of a 
+  triggering algorithm for anomaly detection, which identifies significant deviations from the background, 
+  signaling the presence of astrophysical transients in the ACD data.
+</p>
+<p>
+  This tool can be adapted for various signals, making it applicable across different contexts in multimessenger studies.
+</p>
 ### Authors
 
 > *_speaker_
