@@ -179,7 +179,7 @@ article div,
 article figure,
 article hr {
   margin: 0;
-  font-size: x-large;
+  font-size: larger;
 }
 article p,
 article h1,
