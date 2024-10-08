@@ -60,12 +60,12 @@
     <main property="articleBody">
           <article>
     <header><h3>Abastract</h3></header>
-    <p>
+    <p style="font-size: larger>
       Multimessenger astrophysics relies on multiple observational data channels, requiring efficient methods to analyze 
       events of astrophysical origin. Given the increasing volume and complexity of data from modern observatories, 
       Machine Learning techniques have become essential for efficiently identifying signals.
     </p>
-    <p>
+    <p style="font-size: larger>
       This project applies Machine Learning techniques to time series data from the Anti-Coincidence Detector on 
       the Fermi Gamma-ray Space Telescope, with the aim of improving the detection of high-energy transient events such 
       as Gamma-Ray Bursts. The poster begins by introducing the motivations of this work; followed by an overview of the 
@@ -74,14 +74,14 @@
       triggering algorithm for anomaly detection, which identifies significant deviations from the background, 
       signaling the presence of astrophysical transients in the ACD data.
     </p>
-    <p>
+    <p style="font-size: larger>
       This tool can be adapted for various signals, making it applicable across different contexts in multimessenger studies.
     </p>
   </article>
 
     <article>
     <header><h3>1. Motivation</h3></header>
-    <p>
+    <p style="font-size: larger>
       This work presents a versatile and flexible <strong>Machine Learning-based software</strong> designed to
       address two challenges in the analysis of time series data: 
       <ul>
@@ -94,14 +94,14 @@
 
     <article>
     <header><h3>2. What is The Anti-Coincidence Detector?</h3></header>
-    <p>
+    <p style="font-size: larger>
       The <strong>Anti-Coincidence Detector</strong> (ACD) is a system on board of Fermi used to reject background
       signal such as charged-particles from the Large Area Telescope signal. 
     </p>
     <figure>
       <img style="width: 70%" src="img/pictures/ACD_from_above.jpg" alt="ACD_from_above">
     </figure>
-    <p>
+    <p style="font-size: larger>
       The ACD is composed of 89 plastic scintillator tiles that detect particles and photons, distributed in the five faces. The signal in each face 
       looks like this:
     </p>
@@ -112,7 +112,7 @@
 
     <article>
     <header><h3>3. Dataset</h3></header>
-    <p>
+    <p style="font-size: larger>
       The dataset used for the training and testing of the software is composed of the time series of the five signals in the ACD and a set of input features:
       <ul>
         <li>the parameters in the <strong>weekly Spacecraft files</strong> (FT2) from the Fermi Collaboration;</li>
@@ -130,10 +130,10 @@
 
     <article>
     <header><h3>4. Background Prediction with Neural Networks</h3></header>
-    <p>
+    <p style="font-size: larger>
       The software was developed starting from the data of the ACD as a playground.
     </p>
-    <p>
+    <p style="font-size: larger>
       The software implements a <strong>Feed-Forward Neural Network</strong> (FFNN) to model the temporal behaviour of the time series.
       In the context of the ACD, the training of the neural network is performed on a dataset having as labeled ouput the ACD signals in the dataset and the input parameters:
     </p>
@@ -141,16 +141,16 @@
     <figure>
       <img style="width: 100%" src="img/schemes/inputs_nn_output.png" alt="full/inputs_nn_output schemes">
     </figure>
-    <p>
+    <p style="font-size: larger>
       The NN uses the <strong>Mean Absolute Error</strong> as a Loss Function, which is less sensitive to outliers in the dataset:
       <figure>
         <img style="width: 60%" src="img/pictures/mae.png" alt="pictures/mae.png">
       </figure>
     </p>
-    <p>
+    <p style="font-size: larger>
       so that the loss function is minimized with the average of the absolute differences between the predicted and the true values for each signal.
     </p>
-    <p>
+    <p style="font-size: larger>
       The NN is trained with the <strong>Adam</strong> optimizer, a stochastic gradient descent method that is based on adaptive estimation and 
       a learning rate scheduler that reduces the learning rate when the loss function does not improve. 
     </p>
@@ -159,13 +159,13 @@
 
     <article>
     <header><h3>5. Results of the NN</h3></header>
-    <p>
+    <p style="font-size: larger>
       The FFNN was trained on a dataset from February 2024 to July 2024, and then tested on different periods with known solar flare events.
       <figure>
         <img style="width: 100%" src="img/pictures/result_nn.png" alt="full/result_nn">
       </figure>
     </p>
-    <p>
+    <p style="font-size: larger>
       Even if the (present) period occurs during a solar maxima and therefore there are plenty of solar flare events, the model still has some problem in accurately describing the flares.
       <figure>
         <img style="width: 100%" src="img/pictures/xpos_flare.png" alt="full/xpos_flare">
