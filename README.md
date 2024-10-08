@@ -14,7 +14,6 @@ in [*European AI for Fundamental Physics Conference 2024*](https://www.aanmelder
 
 ## Abstract
 
-    <header><h3>Abastract</h3></header>
     <p>
       Multimessenger astrophysics relies on multiple observational data channels, requiring efficient methods to analyze 
       events of astrophysical origin. Given the increasing volume and complexity of data from modern observatories, 
