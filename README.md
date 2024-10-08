@@ -23,13 +23,14 @@ Good agreement is observed by comparing key reconstructed quantities obtained wi
 
 > *_speaker_
 
-- Lucio Anderlini [1]
-- Matteo Barbetti* [2]
-- Simone Capelli [3,4]
-- Gloria Corti [5]
-- Adam Davis [6]
-- Denis Derkach [7]
-- Maurizio Martinelli [3,4]
+  <span class="medium">
+    <a property="author"><strong>A. Adelfio</strong><sup>1</sup></a>,
+    <a property="author">S. Cutini<sup>1</sup></a>,
+    <a property="author">S. Germani<sup>2</sup></a>,
+    <a property="author">F. Longo<sup>3</sup></a>,
+    <a property="author">S. Maldera<sup>4</sup></a>,
+    <a property="author">R. Crupi<sup>5</sup></a>,
+  </span>
 
 <details>
   <summary><b>Affiliations</b></summary>
