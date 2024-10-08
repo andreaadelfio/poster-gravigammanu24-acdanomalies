@@ -34,15 +34,14 @@ Good agreement is observed by comparing key reconstructed quantities obtained wi
 
 <details>
   <summary><b>Affiliations</b></summary>
-  <ol type="1">
-    <li>Istituto Nazionale di Fisica Nucleare (INFN), Sezione di Firenze, Italy</li>
-    <li>Istituto Nazionale di Fisica Nucleare (INFN), CNAF, Italy</li>
-    <li>Istituto Nazionale di Fisica Nucleare (INFN), Sezione di Milano-Bicocca, Italy</li>
-    <li>Department of Physics, University of Milano-Bicocca, Italy</li>
-    <li>European Organization for Nuclear Research (CERN), Switzerland</li>
-    <li>Department of Physics and Astronomy, University of Manchester, United Kingdom</li>
-    <li>Faculty of Computer Science, HSE University, Russia</li>
-  </ol>
+  <span class="normal">
+    <sup>1</sup><a property="sourceOrganization">INFN-Perugia</a>,
+    <sup>2</sup><a property="sourceOrganization">University of Perugia</a>,
+    <sup>3</sup><a property="sourceOrganization">INFN-Trieste</a>,
+    <sup>4</sup><a property="sourceOrganization">INFN-Torino</a>,
+    <sup>5</sup><a property="sourceOrganization">University of Udine</a>,
+    {# <sup>a</sup><a property="sourceOrganization">Istituto Nazionale di Fisica Nucleare (INFN), CNAF, Italy</a> #}
+  </span>
 </details>
 
 ## Acknowledgements
