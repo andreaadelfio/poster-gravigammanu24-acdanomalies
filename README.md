@@ -14,11 +14,24 @@ in [*European AI for Fundamental Physics Conference 2024*](https://www.aanmelder
 
 ## Abstract
 
-In the LHCb experiment, during Run2, more than 90% of the computing resources available to the Collaboration were used for detector simulation. The detector and trigger upgrades introduced for Run3 allow to collect larger datasets that, in turn, will require larger simulated samples. Despite the use of a variety of fast simulation options, the demands for simulations will far exceed the pledged resources.
-To face upcoming and future requests for simulated samples, we propose Lamarr, a novel framework implementing a flash-simulation paradigm via parametric functions and deep generative models.
-Integrated within the general LHCb Simulation software framework, Lamarr provides analysis-level variables taking as input particles from physics generators, and parameterizing the detector response and the reconstruction algorithms. Lamarr consists of a pipeline of machine-learning-based modules that allow, for selected sets of particles, to introduce reconstruction errors or infer high-level quantities via (non-)parametric functions.
-Good agreement is observed by comparing key reconstructed quantities obtained with Lamarr against those from the existing detailed Geant4-based simulation. A reduction of at least two orders of magnitude in the computational cost for the detector modeling phase of the LHCb simulation is expected when adopting Lamarr.
-
+    <header><h3>Abastract</h3></header>
+    <p>
+      Multimessenger astrophysics relies on multiple observational data channels, requiring efficient methods to analyze 
+      events of astrophysical origin. Given the increasing volume and complexity of data from modern observatories, 
+      Machine Learning techniques have become essential for efficiently identifying signals.
+    </p>
+    <p>
+      This project applies Machine Learning techniques to time series data from the Anti-Coincidence Detector on 
+      the Fermi Gamma-ray Space Telescope, with the aim of improving the detection of high-energy transient events such 
+      as Gamma-Ray Bursts. The poster begins by introducing the motivations of this work; followed by an overview of the 
+      Anti-Coincidence Detector and the satellite data itself. A Feed-Forward Neural Network is employed to learn temporal 
+      patterns in the time series and predict the background these series. It is followed by the implementation of a 
+      triggering algorithm for anomaly detection, which identifies significant deviations from the background, 
+      signaling the presence of astrophysical transients in the ACD data.
+    </p>
+    <p>
+      This tool can be adapted for various signals, making it applicable across different contexts in multimessenger studies.
+    </p>
 ### Authors
 
 > *_speaker_
