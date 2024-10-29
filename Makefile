@@ -8,7 +8,7 @@ docs/poster.html: docs/src_poster.jinja2 poster.jinja2 docs/poster.css
 
 git:
 	git add --all
-	git commit -m "Update poster"
+	git commit -m "Update poster at $(shell date)"
 	git push
 
 clean:
