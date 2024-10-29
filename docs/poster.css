@@ -180,6 +180,9 @@ article figure,
 article hr {
   margin: 0;
 }
+article p {
+  text-align: justify;
+}
 article p,
 article h1,
 article ul,
