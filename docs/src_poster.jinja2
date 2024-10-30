@@ -109,9 +109,9 @@
 {### Contents ###}
 
 {% block contents %}
-  {# Abastract #}
+  {# Abstract #}
   <article>
-    <header><h3>Abastract</h3></header>
+    <header><h3>Abstract</h3></header>
     <p>
       Multimessenger astrophysics relies on multiple observational data channels, requiring efficient methods to analyze 
       events of astrophysical origin. Given the increasing volume and complexity of data from modern observatories, 
@@ -196,21 +196,28 @@
       The software was developed starting from the data of the ACD as a playground.
     </p>
     <p>
-      The software implements a <strong>Feed-Forward Neural Network</strong> (FFNN) to model the temporal behaviour of the time series.
-      In the context of the ACD, the training of the neural network is performed on a dataset having as labeled ouput the ACD signals in the dataset and the input parameters:
+      The software implements a multioutput <strong>Feed-Forward Neural Network</strong> (FFNN) to model the temporal behaviour of the time series.
+      In the context of the ACD, the training of the neural network is performed on a dataset having as labeled output the ACD signals in the dataset and the input parameters:
     </p>
     <hr/>
     <figure>
       <img style="width: 100%" src="img/schemes/inputs_nn_output.png" alt="full/inputs_nn_output schemes">
     </figure>
     <p>
-      The NN uses the <strong>Mean Absolute Error</strong> as a Loss Function, which is less sensitive to outliers in the dataset:
+      The NN implements the <strong>Mean Absolute Error</strong> as a Loss Function, which is less sensitive to outliers in the dataset. In general the MAE is defined as follows:
     </p>
-      \[\mathrm{MAE} = \frac{\sum_{i=1}^n\left| y_i - x_i\right|}{n}\],
+      \[\mathrm{MAE} = \frac{1}{N}\sum_{i=1}^N\left| y_i - \hat{y}_i\right|,\]
     <p>
-      so that the loss function is minimized with the average of the absolute differences between the predicted \(f(\textbf{x}_i)\) and the true values \(y_i\) for each signal:
+      where \(N\) is the number of samples in the dataset, \(y_i\) is the true value (<em>ground truth</em>) of the signal for the sample \(i\), and \(\hat{y}_i\) is the predicted value of the signal for that sample.
+      Applied to a multioutput NN with estimator function \(f_j\):
     </p>
-      \[\mathcal{L}_{\textit{MAE}}=\frac{1}{N}\sum_{i=1}^N \left| y_i - f(\textbf{x}_i)\right|\].
+      \[\mathrm{MAE}_j = \frac{1}{N}\sum_{i=1}^N\left| y_{j,i} - f_j(\textbf{x}_i)\right|,\]
+    <p>
+      where \(\textbf{x}_i\) is the input feature vector for sample \(i\), \(j\) is the index of the \(M\) outputs (the 5 signals in the ACD), and \(f_j(\textbf{x}_i)\) the estimated value for the 
+      \(j\)-th output variable for sample \(i\), produced by the neural network with estimator function \(f\).
+      The loss function is minimized with the average of the loss functions for each sample and each signals of the ACD:
+    </p>
+      \[\mathcal{L}_{\textit{MAE}}=\frac{1}{M}\sum_{j=1}^M \mathrm{MAE}_j=\frac{1}{M}\sum_{j=1}^M \frac{1}{N}\sum_{i=1}^N \left| y_{j,i} - f_j(\textbf{x}_i)\right|.\]
     <p>
       The NN is trained with the <strong>Adam</strong> optimizer, a stochastic gradient descent method that is based on adaptive estimation and 
       a learning rate scheduler that reduces the learning rate when the loss function does not improve. 
@@ -278,13 +285,13 @@
       for the anomaly detection in time series data</strong>.
     </p>
     <p>
-      <strong>FFNN-based models</strong></strong> can be used to describe complex dependencies, such as the ones dependent on the environment
+      <strong>FFNN-based models</strong> can be used to describe complex dependencies, such as the ones dependent on the environment
       in which the Fermi satellite is immersed.
       Work is still required to assess the performance of the neural network in big datasets and in different conditions (e.g.
       periods in which the solar activity is particularly high).
     </p>
     <p>
-      The triggering algorithm is an importan part of the software, and it is still under development.
+      The triggering algorithm is an important part of the software, and it is still under development.
     </p>
     <p>
       Future development of <strong><span class="monospace">ACDAnomalies</span></strong> aims to support both integration within the Fermi software stack and its 

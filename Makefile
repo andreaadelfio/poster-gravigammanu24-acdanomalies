@@ -1,5 +1,7 @@
 all: docs/poster.html docs/poster.css git
 
+no_git: docs/poster.html docs/poster.css
+
 docs/poster.css: src_poster.less
 	lessc --strict-units=on $< $@
 
