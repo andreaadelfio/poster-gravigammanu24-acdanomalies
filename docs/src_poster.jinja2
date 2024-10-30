@@ -206,9 +206,10 @@
     <p>
       The NN uses the <strong>Mean Absolute Error</strong> as a Loss Function, which is less sensitive to outliers in the dataset:
     </p>
-      \[\mathrm{MAE} = \frac{\sum_{i=1}^n\left| y_i - x_i\right|}{n} =\frac{\sum_{i=1}^n\left| e_i \right|}{n}\]
+      \[\mathrm{MAE} = \frac{\sum_{i=1}^n\left| y_i - x_i\right|}{n}\]
     <p>
-      so that the loss function is minimized with the average of the absolute differences between the predicted and the true values for each signal.
+      so that the loss function is minimized with the average of the absolute differences between the predicted f(\textbf{x}_i) and the true values \(y_i\) for each signal.
+      \[\mathcal{L}_{\textit{MAE}}=\frac{1}{N}\sum_{i=1}^N \left| y_i - f(\textbf{x}_i)\right|\]
     </p>
     <p>
       The NN is trained with the <strong>Adam</strong> optimizer, a stochastic gradient descent method that is based on adaptive estimation and 
