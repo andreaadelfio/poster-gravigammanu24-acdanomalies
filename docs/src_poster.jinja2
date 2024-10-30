@@ -208,9 +208,9 @@
     </p>
       \[\mathrm{MAE} = \frac{\sum_{i=1}^n\left| y_i - x_i\right|}{n}\]
     <p>
-      so that the loss function is minimized with the average of the absolute differences between the predicted f(\textbf{x}_i) and the true values \(y_i\) for each signal.
-      \[\mathcal{L}_{\textit{MAE}}=\frac{1}{N}\sum_{i=1}^N \left| y_i - f(\textbf{x}_i)\right|\]
+      so that the loss function is minimized with the average of the absolute differences between the predicted \(f(\textbf{x}_i)\) and the true values \(y_i\) for each signal.
     </p>
+      \[\mathcal{L}_{\textit{MAE}}=\frac{1}{N}\sum_{i=1}^N \left| y_i - f(\textbf{x}_i)\right|\]
     <p>
       The NN is trained with the <strong>Adam</strong> optimizer, a stochastic gradient descent method that is based on adaptive estimation and 
       a learning rate scheduler that reduces the learning rate when the loss function does not improve. 
