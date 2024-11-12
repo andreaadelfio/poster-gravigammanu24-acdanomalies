@@ -167,9 +167,10 @@ article {
   background: white;
   display: flex;
   flex-direction: column;
-  hyphens: auto;
+  hyphens: none;
   line-height: 1.35;
   padding: 0 0.5rem 0.5rem 0.5rem;
+  text-align: justify;
 }
 article p,
 article ul,
